@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{945D2324-26EF-4DBB-820E-9F7789997C93}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fargrid", "Fargrid\Fargrid.vcxproj", "{E2189E5C-B6D8-457F-B9E9-1211E94DC2ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2189E5C-B6D8-457F-B9E9-1211E94DC2ED}.Debug|x64.ActiveCfg = Debug|x64
+		{E2189E5C-B6D8-457F-B9E9-1211E94DC2ED}.Debug|x64.Build.0 = Debug|x64
+		{E2189E5C-B6D8-457F-B9E9-1211E94DC2ED}.Release|x64.ActiveCfg = Release|x64
+		{E2189E5C-B6D8-457F-B9E9-1211E94DC2ED}.Release|x64.Build.0 = Release|x64
+		{945D2324-26EF-4DBB-820E-9F7789997C93}.Debug|x64.ActiveCfg = Debug|x64
+		{945D2324-26EF-4DBB-820E-9F7789997C93}.Debug|x64.Build.0 = Debug|x64
+		{945D2324-26EF-4DBB-820E-9F7789997C93}.Release|x64.ActiveCfg = Release|x64
+		{945D2324-26EF-4DBB-820E-9F7789997C93}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F22625A5-97C7-485E-908F-FAFB7A879D56}
+	EndGlobalSection
+EndGlobal
