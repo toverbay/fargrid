@@ -8,7 +8,6 @@ bin/
 bin-int/
 [Ll]og/
 [Ll]ogs/
-vendor/
 
 # User-specific files
 *.rsuser
