@@ -1,0 +1,3 @@
+[submodule "Fargrid/vendor/spdlog"]
+	path = Fargrid/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
