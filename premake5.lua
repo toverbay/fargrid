@@ -15,6 +15,8 @@ project "Fargrid"
     location "Fargrid"
     kind "SharedLib"
     language "C++"
+    -- Doesn't work with current version of Premake
+    -- externalwarnings "Off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -27,6 +29,7 @@ project "Fargrid"
 
     includedirs
     {
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 
@@ -34,8 +37,10 @@ project "Fargrid"
         cppdialect "C++17"
         staticruntime "On"
         systemversion "latest"
-        buildoptions "/external:W0"
-
+        buildoptions {
+            -- Remove this when 'externalwarnings "Off" is available'
+            "/external:W0"
+        }
         defines
         {
             "FG_PLATFORM_WINDOWS",
@@ -63,6 +68,8 @@ project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    -- Doesn't work with current version of Premake
+    -- externalwarnings "Off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -88,7 +95,10 @@ project "Sandbox"
         cppdialect "C++17"
         staticruntime "On"
         systemversion "latest"
-        buildoptions "/external:W0"
+        buildoptions {
+            -- Remove this when 'externalwarnings "Off" is available'
+            "/external:W0"
+        }
 
         defines
         {

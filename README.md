@@ -1,14 +1,14 @@
 # Fargrid
 
-Yet another attempt at a game engine based on Cherno's [Hazel Game Engine Series](https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT).
+Yet another attempt at a game engine. This one is based on Cherno's [Hazel Game Engine Series](https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT).
 
 Disclaimer: I am neither a professional game programmer nor a very strong C++ programmer.
 
-I am a professional software engineer working on C# and JavasScript projects, so I thought it might be fun to do something a little different. The plan is to follow along with Cherno's Hazel development videos and adapt it to a game engine I could use in a C# project. It might be cool. It might be an epic failure. Either way, it should be interesting.
+I am a professional software engineer working on C# and JavasScript projects and I thought it might be fun to do something a little different. The plan is to follow along with Cherno's Hazel development videos and adapt it to a game engine I could use in a C# project. It might be cool. It might be an epic failure. Either way, it should be interesting.
 
 ## Notes from the videos
 
-- I actually started the project by following along in the [Project Setup](https://www.youtube.com/watch?v=KG8cAGvn9d4&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=4) video. I used "Fargrid" whereever Cherno used "Hazel" and "FG" whereever he used "HZ".
+- I started the project by following along in the [Project Setup](https://www.youtube.com/watch?v=KG8cAGvn9d4&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=4) video. I used "Fargrid" wherever Cherno used "Hazel" and "FG" wherever he used "HZ".
 
   - [commit](https://github.com/toverbay/fargrid/commit/99a2bc8522aec981c8acf18860b87e6e66d57259)
 
@@ -24,4 +24,14 @@ I am a professional software engineer working on C# and JavasScript projects, so
 
   - [commit](https://github.com/toverbay/fargrid/commit/26f592220c890d8f114b4fd10afeb9448041566f)
 
+- I followed along with the [Event System](https://www.youtube.com/watch?v=xnopUoZbMEk&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=9). It was frustrating at first because I made a really dumb mistake<sup>1</sup>, but I worked it out.
+
+  A continuing source of frustration is that compiler warnings for external includes keep appearing. The `/external:W0` doesn't seem to work. I either didn't configured it correctly for Premake, I don't completely understand how it's supposed to work, or it just plain doesn't work. I also discovered the [externalwarnings](https://premake.github.io/docs/externalwarnings/) option for Premake, but it just crashed Premake when I tried to use it. *sigh*
+
+  - [commit]()
+
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
+
+###### footnotes
+
+  <sup><sup>1</sup> I was using `FARGRID_API` for all my class definitions, but the actual macro is `FG_API`.</sup> :sweat_smile:

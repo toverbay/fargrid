@@ -4,6 +4,9 @@
     <Filter Include="Fargrid">
       <UniqueIdentifier>{84F6B9FA-F0D5-3896-F9ED-C36C654C9FF7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fargrid\Events">
+      <UniqueIdentifier>{E8A59070-D473-8476-BD07-F59CA97460DB}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Fargrid.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Fargrid\EntryPoint.h">
       <Filter>Fargrid</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fargrid\Events\ApplicationEvent.h">
+      <Filter>Fargrid\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fargrid\Events\Event.h">
+      <Filter>Fargrid\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fargrid\Events\KeyEvent.h">
+      <Filter>Fargrid\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fargrid\Events\MouseEvent.h">
+      <Filter>Fargrid\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Fargrid\Log.h">
       <Filter>Fargrid</Filter>

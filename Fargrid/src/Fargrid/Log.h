@@ -4,10 +4,8 @@
 
 #include "Core.h"
 
-#pragma warning(push, 0)        
-//Some includes with unfixable warnings
 #include "spdlog/spdlog.h"
-#pragma warning(pop)
+#include "spdlog/fmt/ostr.h"
 
 namespace Fargrid {
 
