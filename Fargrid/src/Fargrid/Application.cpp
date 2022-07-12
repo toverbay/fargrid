@@ -1,3 +1,5 @@
+#include "fgpch.h"
+
 #include "Application.h"
 #include "Fargrid/Events/ApplicationEvent.h"
 #include "Fargrid/Log.h"

@@ -21,6 +21,9 @@ project "Fargrid"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "fgpch.h"
+    pchsource "Fargrid/src/fgpch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",

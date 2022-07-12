@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Fargrid {
 
 	class FG_API MouseMovedEvent : public Event

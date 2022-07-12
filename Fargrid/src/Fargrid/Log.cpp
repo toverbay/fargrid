@@ -1,3 +1,5 @@
+#include "fgpch.h"
+
 #include "Log.h"
 
 #pragma warning(push, 0)        

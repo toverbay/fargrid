@@ -2,9 +2,6 @@
 
 #include "Fargrid/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Fargrid {
 
 	// Events in Fargrid are currently blocking, meaning when an event occurs, it
