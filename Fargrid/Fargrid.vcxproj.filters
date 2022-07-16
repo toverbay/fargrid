@@ -7,6 +7,12 @@
     <Filter Include="Fargrid\Events">
       <UniqueIdentifier>{E8A59070-D473-8476-BD07-F59CA97460DB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{aa144bc0-9275-4e38-aac6-0f2f08a4c81a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{befe2279-5d93-4542-ad6d-5f3d438904dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Fargrid.h" />
@@ -35,6 +41,12 @@
       <Filter>Fargrid</Filter>
     </ClInclude>
     <ClInclude Include="src\fgpch.h" />
+    <ClInclude Include="src\Fargrid\Window.h">
+      <Filter>Fargrid</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fargrid\Application.cpp">
@@ -44,5 +56,8 @@
       <Filter>Fargrid</Filter>
     </ClCompile>
     <ClCompile Include="src\fgpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "fgpch.h"
+
 #include "Fargrid/Core.h"
 
 namespace Fargrid {

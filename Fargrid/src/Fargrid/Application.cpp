@@ -8,7 +8,7 @@ namespace Fargrid {
 
 	Application::Application()
 	{
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -18,14 +18,11 @@ namespace Fargrid {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
 
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_IsRunning)
 		{
-			FG_TRACE(e);
+			m_Window->OnUpdate();
 		}
-
-		while (true);
 	}
 
 }
