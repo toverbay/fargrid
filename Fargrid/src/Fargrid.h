@@ -6,6 +6,8 @@
 #include "Fargrid/Layer.h"
 #include "Fargrid/Log.h"
 
+#include "Fargrid/ImGui/ImGuiLayer.h"
+
 // -- Entry Point -----------------------------------
 #include "Fargrid/EntryPoint.h"
 // -- Entry Point -----------------------------------

@@ -50,11 +50,16 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/19b96efcec6813bdfa008d9742e145d12b3e49c9)
 
+- I followed along with the [ImGui](https://www.youtube.com/watch?v=st4lgNI6_F4&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=15) video to hack ImGui into the project. As expected, I immediately ran into some... er... temporal issues because I'm watching from almost 4 years in the future. A lot of changes were made to ImGui since this video. IO has been completely revamped, for example. Fortunately, the old way was obsoleted but not removed<sup>3</sup>.
+
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
+
+  - [commit]()
 
 ###### footnotes
 
   <sup><sup>1</sup> I was using `FARGRID_API` for all my class definitions, but the actual macro is `FG_API`.</sup> :sweat_smile:
 
   <sup><sup>2</sup> I may want to investigate [Glad 2](https://gen.glad.sh/) later to see if there are any benefits to using it.</sup>
-  
+
+  <sup><sup>3</sup>  Unfortunately, all the key remapping code that Cherno just conveniently copied & pasted from the ImGui source was no long there, so I had to type all that out :unamused:
