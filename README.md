@@ -38,11 +38,15 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Window Events](https://www.youtube.com/watch?v=r74WxFMIEdU&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=12) video and things went much more smoothly. Now I can respond to keyboard, mouse and window events. Yay!
 
-  - [commit](https://github.com/toverbay/fargrid/commit/https://github.com/toverbay/fargrid/commit/c4e13bf8a2b3dbf657b2a779aaea8f1ebe6896f2)
+  - [commit](https://github.com/toverbay/fargrid/commit/c4e13bf8a2b3dbf657b2a779aaea8f1ebe6896f2)
 
 - I followed along with the [Layers](https://www.youtube.com/watch?v=_Kj6BSfM6P4&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=13) video to implement layers and a layer stack. Pretty straightforward concepts: Layers are updated/rendered bottom-to-top and events are bubbled top-to-bottom. I kind of dread the next one, which is adding ImGui. I've struggled with forking & linking external projects, but maybe the lessons learned will make it go better than before.
 
-  - [commit](https://github.com/toverbay/fargrid/commit/https://github.com/toverbay/fargrid/commit/)
+  - [commit](https://github.com/toverbay/fargrid/commit/2fccebc5ab2830e8afe92f7961d4136885112710)
+
+- I followed along with the [Modern OpenGL (Glad)](https://www.youtube.com/watch?v=HFyHIc89z1g&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=14) video to add modern OpenGL functionality to the project. The [Glad configurator](https://glad.dav1d.de) was pretty cool. Here is the permalink to the [generated files](https://glad.dav1d.de/#language=c&specification=gl&api=gl%3D4.6&api=gles1%3Dnone&api=gles2%3Dnone&api=glsc2%3Dnone&profile=compatibility&loader=on). I may want to investigate [Glad 2](https://gen.glad.sh/) later to see if there are any benefits to using it. Also, I didn't see Cherno add the license for Glad to the vendor folder. Not sure if it's necessary, but I went ahead and grabbed the license from the [Glad repo](https://github.com/Dav1dde/glad) anyway.
+
+  - [commit]()
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 

@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Fargrid/vendor/GLFW/include"
+IncludeDir["Glad"] = "Fargrid/vendor/Glad/include"
 
 include "Fargrid/vendor/GLFW"
+include "Fargrid/vendor/Glad"
 
 project "Fargrid"
     location "Fargrid"
@@ -40,12 +42,14 @@ project "Fargrid"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -60,7 +64,8 @@ project "Fargrid"
         defines
         {
             "FG_PLATFORM_WINDOWS",
-            "FG_BUILD_DLL"
+            "FG_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands

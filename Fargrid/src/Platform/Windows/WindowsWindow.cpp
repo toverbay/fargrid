@@ -5,9 +5,12 @@
 #include "Fargrid/Events/MouseEvent.h"
 #include "Fargrid/Events/KeyEvent.h"
 
+#include <glad/glad.h>
+
 namespace Fargrid {
 
 	static bool s_GLFWInitialized = false;
+
 	static void GLFWErrorCallback(int error, const char* description)
 	{
 		FG_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
@@ -38,7 +41,7 @@ namespace Fargrid {
 
 		if (!s_GLFWInitialized)
 		{
-			// TODO: flgwTerminate on system shutdown
+			// TODO: glfwTerminate on system shutdown
 			int success = glfwInit();
 			FG_CORE_ASSERT(success, "Could not initialize GLFW!");
 			glfwSetErrorCallback(GLFWErrorCallback);
@@ -48,6 +51,8 @@ namespace Fargrid {
 
 		m_Window = glfwCreateWindow((int)m_Data.Width, (int)m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		FG_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
