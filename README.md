@@ -55,5 +55,6 @@ I am a professional software engineer working on C# and JavasScript projects and
 ###### footnotes
 
   <sup><sup>1</sup> I was using `FARGRID_API` for all my class definitions, but the actual macro is `FG_API`.</sup> :sweat_smile:
+
   <sup><sup>2</sup> I may want to investigate [Glad 2](https://gen.glad.sh/) later to see if there are any benefits to using it.</sup>
   
