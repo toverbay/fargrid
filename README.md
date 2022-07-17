@@ -44,12 +44,16 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/2fccebc5ab2830e8afe92f7961d4136885112710)
 
-- I followed along with the [Modern OpenGL (Glad)](https://www.youtube.com/watch?v=HFyHIc89z1g&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=14) video to add modern OpenGL functionality to the project. The [Glad configurator](https://glad.dav1d.de) was pretty cool. Here is the permalink to the [generated files](https://glad.dav1d.de/#language=c&specification=gl&api=gl%3D4.6&api=gles1%3Dnone&api=gles2%3Dnone&api=glsc2%3Dnone&profile=compatibility&loader=on). I may want to investigate [Glad 2](https://gen.glad.sh/) later to see if there are any benefits to using it. Also, I didn't see Cherno add the license for Glad to the vendor folder. Not sure if it's necessary, but I went ahead and grabbed the license from the [Glad repo](https://github.com/Dav1dde/glad) anyway.
+- I followed along with the [Modern OpenGL (Glad)](https://www.youtube.com/watch?v=HFyHIc89z1g&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=14) video to add modern OpenGL functionality to the project. The [Glad configurator](https://glad.dav1d.de) was pretty cool<sup>2</sup>. Here is the permalink to the [generated files](https://glad.dav1d.de/#language=c&specification=gl&api=gl%3D4.6&api=gles1%3Dnone&api=gles2%3Dnone&api=glsc2%3Dnone&profile=compatibility&loader=on).
 
-  - [commit]()
+  I didn't see Cherno add the license for Glad to the vendor folder. Not sure if it's necessary, but I went ahead and grabbed the license from the [Glad repo](https://github.com/Dav1dde/glad) anyway.
+
+  - [commit](https://github.com/toverbay/fargrid/commit/19b96efcec6813bdfa008d9742e145d12b3e49c9)
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 
 ###### footnotes
 
   <sup><sup>1</sup> I was using `FARGRID_API` for all my class definitions, but the actual macro is `FG_API`.</sup> :sweat_smile:
+  <sup><sup>2</sup> I may want to investigate [Glad 2](https://gen.glad.sh/) later to see if there are any benefits to using it.</sup>
+  
