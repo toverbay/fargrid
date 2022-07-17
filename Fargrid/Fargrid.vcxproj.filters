@@ -37,6 +37,12 @@
     <ClInclude Include="src\Fargrid\Events\MouseEvent.h">
       <Filter>Fargrid\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fargrid\Layer.h">
+      <Filter>Fargrid</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fargrid\LayerStack.h">
+      <Filter>Fargrid</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fargrid\Log.h">
       <Filter>Fargrid</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fargrid\Application.cpp">
+      <Filter>Fargrid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fargrid\Layer.cpp">
+      <Filter>Fargrid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Fargrid\LayerStack.cpp">
       <Filter>Fargrid</Filter>
     </ClCompile>
     <ClCompile Include="src\Fargrid\Log.cpp">

@@ -38,7 +38,11 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Window Events](https://www.youtube.com/watch?v=r74WxFMIEdU&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=12) video and things went much more smoothly. Now I can respond to keyboard, mouse and window events. Yay!
 
-  - [commit](https://github.com/toverbay/fargrid/commit/)
+  - [commit](https://github.com/toverbay/fargrid/commit/https://github.com/toverbay/fargrid/commit/c4e13bf8a2b3dbf657b2a779aaea8f1ebe6896f2)
+
+- I followed along with the [Layers](https://www.youtube.com/watch?v=_Kj6BSfM6P4&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=13) video to implement layers and a layer stack. Pretty straightforward concepts: Layers are updated/rendered bottom-to-top and events are bubbled top-to-bottom. I kind of dread the next one, which is adding ImGui. I've struggled with forking & linking external projects, but maybe the lessons learned will make it go better than before.
+
+  - [commit](https://github.com/toverbay/fargrid/commit/https://github.com/toverbay/fargrid/commit/)
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 
