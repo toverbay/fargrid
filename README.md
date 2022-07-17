@@ -24,11 +24,17 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/26f592220c890d8f114b4fd10afeb9448041566f)
 
-- I followed along with the [Event System](https://www.youtube.com/watch?v=xnopUoZbMEk&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=9). It was frustrating at first because I made a really dumb mistake<sup>1</sup>, but I worked it out.
+- I followed along with the [Event System](https://www.youtube.com/watch?v=xnopUoZbMEk&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=9) video. It was frustrating at first because I made a really dumb mistake<sup>1</sup>, but I worked it out.
 
   A continuing source of frustration is that compiler warnings for external includes keep appearing. The `/external:W0` compiler option doesn't seem to work. I either didn't configured it correctly for Premake, I don't completely understand how it's supposed to work, or it just plain doesn't work. I also discovered the [externalwarnings](https://premake.github.io/docs/externalwarnings/) option for Premake, but it just crashed Premake when I tried to use it. *sigh*
 
   - [commit](https://github.com/toverbay/fargrid/commit/f9f95b16cdff48b428dbb8ce8de859b905010a64)
+
+- I followed along with the [Window Abstraction and GLFW](https://www.youtube.com/watch?v=88dmtleVywk&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=11) video. Cherno adds his own [fork](https://github.com/TheCherno/glfw) of the [GLFW](https://github.com/glfw/glfw) as a submodule and then references it in his project. Now I had a decision to make here: Should I use his fork or create my own fork? I decided to use his fork just to get things started and then create and link my own fork later.
+
+  I immediately ran into issues. The video is almost four years old at the time I'm writing this and both the GLFW project and Cherno's fork of it have had many, many commits in the interim. So I decided to just fork GLFW as it is now and, after a bit of fiddling around, got it working. This was not a cut-and-dried, follow along with the video kind of episode, but it should be easier from this point.
+
+  - [commit](https://github.com/toverbay/fargrid/commit/55003e556c2392d096d6dd15795b454955b976a0)
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 
