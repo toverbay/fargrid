@@ -28,6 +28,8 @@ project "Fargrid"
     location "Fargrid"
     kind "SharedLib"
     language "C++"
+    staticruntime "off"
+
     -- Doesn't work with current version of Premake
     -- externalwarnings "Off"
 
@@ -62,7 +64,6 @@ project "Fargrid"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
         buildoptions {
             -- Remove this when 'externalwarnings "Off" is available'
@@ -82,23 +83,25 @@ project "Fargrid"
 
     filter "configurations:Debug"
         defines "FG_DEBUG"
-        buildoptions "/MDd"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "FG_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "FG_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
 project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "off"
+
     -- Doesn't work with current version of Premake
     -- externalwarnings "Off"
 
@@ -124,7 +127,6 @@ project "Sandbox"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         systemversion "latest"
         buildoptions {
             -- Remove this when 'externalwarnings "Off" is available'
@@ -138,15 +140,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "FG_DEBUG"
-        buildoptions "/MDd"
+        runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
         defines "FG_RELEASE"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
 
     filter "configurations:Dist"
         defines "FG_DIST"
-        buildoptions "/MD"
+        runtime "Release"
         optimize "On"
