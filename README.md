@@ -58,6 +58,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/ab1d77a8df3aec10942a67e5ddde5a42bcdb552b)
 
+- I followed along with the [Input Polling](https://www.youtube.com/watch?v=yuhNj8yGDJQ&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=19) video. No surprises. It all worked.
+
+  - [commit]()
+
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 
 ###### footnotes
