@@ -16,7 +16,7 @@ namespace Fargrid {
 		None = 0,
 		WindowClose, WindowResize, WindowFocus, WindowBlur, WindowMoved,
 		AppTick, AppUpdate, AppRender,
-		KeyPressed, KeyReleased,
+		KeyPressed, KeyReleased, KeyTyped,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 

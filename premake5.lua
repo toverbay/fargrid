@@ -17,9 +17,12 @@ IncludeDir["GLFW"] = "Fargrid/vendor/GLFW/include"
 IncludeDir["Glad"] = "Fargrid/vendor/Glad/include"
 IncludeDir["ImGui"] = "Fargrid/vendor/imgui"
 
-include "Fargrid/vendor/GLFW"
-include "Fargrid/vendor/Glad"
-include "Fargrid/vendor/imgui"
+group "Dependencies"
+    include "Fargrid/vendor/GLFW"
+    include "Fargrid/vendor/Glad"
+    include "Fargrid/vendor/imgui"
+
+group ""
 
 project "Fargrid"
     location "Fargrid"
@@ -74,7 +77,7 @@ project "Fargrid"
 
         postbuildcommands
         {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+            ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
         }
 
     filter "configurations:Debug"
