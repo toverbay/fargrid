@@ -67,6 +67,8 @@
     <ClInclude Include="src\fgpch.h" />
     <ClInclude Include="src\Fargrid\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Fargrid\KeyCodes.h" />
+    <ClInclude Include="src\Fargrid\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fargrid\Application.cpp">

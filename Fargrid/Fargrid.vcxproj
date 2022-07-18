@@ -162,9 +162,11 @@
     <ClInclude Include="src\Fargrid\Events\MouseEvent.h" />
     <ClInclude Include="src\Fargrid\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Fargrid\Input.h" />
+    <ClInclude Include="src\Fargrid\KeyCodes.h" />
     <ClInclude Include="src\Fargrid\Layer.h" />
     <ClInclude Include="src\Fargrid\LayerStack.h" />
     <ClInclude Include="src\Fargrid\Log.h" />
+    <ClInclude Include="src\Fargrid\MouseButtonCodes.h" />
     <ClInclude Include="src\Fargrid\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />

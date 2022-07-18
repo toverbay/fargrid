@@ -6,6 +6,10 @@
 #include "Fargrid/Layer.h"
 #include "Fargrid/Log.h"
 
+#include "Fargrid/Input.h"
+#include "Fargrid/KeyCodes.h"
+#include "Fargrid/MouseButtonCodes.h"
+
 #include "Fargrid/ImGui/ImGuiLayer.h"
 
 // -- Entry Point -----------------------------------

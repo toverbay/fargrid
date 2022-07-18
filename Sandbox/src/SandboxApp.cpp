@@ -10,12 +10,19 @@ public:
 
 	void OnUpdate() override
 	{
-		FG_INFO("ExampleLayer::Update");
+		// Ex: Polling for keys
+		if (Fargrid::Input::IsKeyPressed(FG_KEY_TAB))
+			FG_TRACE("Tab key is pressed!");
 	}
 
 	void OnEvent(Fargrid::Event& event) override
 	{
-		FG_TRACE("{0}", event);
+		// Ex: Log printable keys
+		if (event.GetEventType() == Fargrid::EventType::KeyPressed)
+		{
+			Fargrid::KeyPressedEvent& e = (Fargrid::KeyPressedEvent&)event;
+			FG_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 
 };
