@@ -50,7 +50,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/19b96efcec6813bdfa008d9742e145d12b3e49c9)
 
-- I followed along with the [ImGui](https://www.youtube.com/watch?v=st4lgNI6_F4&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=15) video to hack ImGui into the project. As expected, I immediately ran into some... er... temporal issues because I'm watching from almost 4 years in the future. A lot of changes were made to ImGui since this video. IO has been completely revamped, for example. Fortunately, the old way was obsoleted but not removed<sup>3</sup>.
+- I followed along with the [ImGui](https://www.youtube.com/watch?v=st4lgNI6_F4&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=15) video to hack [Dear ImGui](https://github.com/ocornut/imgui) into the project. As expected, I immediately ran into some... er... temporal issues because I'm watching from almost 4 years in the future. A lot of changes were made to ImGui since this video. IO has been completely revamped, for example. Fortunately, the old way was obsoleted but not removed<sup>3</sup>.
 
   - [commit](https://github.com/toverbay/fargrid/commit/49e6fee0ed67016ae4fff7728092e91e331af700)
 
@@ -65,6 +65,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 - I followed along with the [Key and Mouse Codes](https://www.youtube.com/watch?v=zaJGn8pur5I&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=20) video. Basically took the key and mouse button codes from glfw and renamed them for the engine. I suppose any re-mapping code will be added later when we implement backends other than OpenGL.
 
   - [commit](https://github.com/toverbay/fargrid/commit/8fb519c224cc38bae67aad07f469bdc32b7195ac)
+
+- I followed along with the [Maths](https://www.youtube.com/watch?v=Idr1G1KyPNg&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=21) to add [glm](https://glm.g-truc.net/0.9.2/api/index.html) to the library. Easy stuff, but this may get tricky to expose C# later.
+
+  - [commit]()
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 
