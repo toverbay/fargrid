@@ -46,6 +46,12 @@
     <ClInclude Include="src\Fargrid\ImGui\ImGuiLayer.h">
       <Filter>Fargrid\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fargrid\Input.h">
+      <Filter>Fargrid</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fargrid\KeyCodes.h">
+      <Filter>Fargrid</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fargrid\Layer.h">
       <Filter>Fargrid</Filter>
     </ClInclude>
@@ -55,20 +61,22 @@
     <ClInclude Include="src\Fargrid\Log.h">
       <Filter>Fargrid</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fargrid\MouseButtonCodes.h">
+      <Filter>Fargrid</Filter>
+    </ClInclude>
     <ClInclude Include="src\Fargrid\Window.h">
       <Filter>Fargrid</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\fgpch.h" />
-    <ClInclude Include="src\Fargrid\Input.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\Fargrid\KeyCodes.h" />
-    <ClInclude Include="src\Fargrid\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fargrid\Application.cpp">
@@ -89,10 +97,12 @@
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\fgpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

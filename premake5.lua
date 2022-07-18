@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Fargrid/vendor/GLFW/include"
 IncludeDir["Glad"] = "Fargrid/vendor/Glad/include"
 IncludeDir["ImGui"] = "Fargrid/vendor/imgui"
+IncludeDir["glm"] = "Fargrid/vendor/glm"
 
 group "Dependencies"
     include "Fargrid/vendor/GLFW"
@@ -51,7 +52,8 @@ project "Fargrid"
         "%{prj.name}/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm}"
     }
 
     links
@@ -117,7 +119,8 @@ project "Sandbox"
     includedirs
     {
         "Fargrid/vendor/spdlog/include",
-        "Fargrid/src"
+        "Fargrid/src",
+        "%{IncludeDir.glm}"
     }
 
     links

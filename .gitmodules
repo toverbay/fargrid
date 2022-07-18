@@ -7,3 +7,6 @@
 [submodule "Fargrid/vendor/imgui"]
 	path = Fargrid/vendor/imgui
 	url = https://github.com/toverbay/imgui.git
+[submodule "Fargrid\\vendor\\glm"]
+	path = Fargrid\\vendor\\glm
+	url = https://github.com/g-truc/glm.git

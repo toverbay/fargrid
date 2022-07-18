@@ -64,7 +64,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Key and Mouse Codes](https://www.youtube.com/watch?v=zaJGn8pur5I&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=20) video. Basically took the key and mouse button codes from glfw and renamed them for the engine. I suppose any re-mapping code will be added later when we implement backends other than OpenGL.
 
-  - [commit]()
+  - [commit](https://github.com/toverbay/fargrid/commit/8fb519c224cc38bae67aad07f469bdc32b7195ac)
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 
