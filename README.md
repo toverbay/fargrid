@@ -54,6 +54,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/49e6fee0ed67016ae4fff7728092e91e331af700)
 
+- I followed along with the [ImGui Events](https://www.youtube.com/watch?v=yBP1gSbQPPM&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=16) video to hook the input events for Dear ImGui<sup>4</sup>. No problems at all.
+
+  - [commit](https://github.com/toverbay/fargrid/commit/ab1d77a8df3aec10942a67e5ddde5a42bcdb552b)
+
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 
 ###### footnotes
@@ -62,4 +66,6 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   <sup><sup>2</sup> I may want to investigate [Glad 2](https://gen.glad.sh/) later to see if there are any benefits to using it.</sup>
 
-  <sup><sup>3</sup>  Unfortunately, all the key remapping code that Cherno just conveniently copied & pasted from the ImGui source was no long there, so I had to type all that out :unamused:
+  <sup><sup>3</sup> Unfortunately, all the key remapping code that Cherno just conveniently copied & pasted from the ImGui source was no long there, so I had to type all that out :unamused:
+
+  <sup><sup>4</sup> The [FAQ](https://github.com/ocornut/imgui/blob/master/docs/FAQ.md#q-what-is-this-library-called) for the "imgui" library specifically states the name of the library is "Dear ImGui" (not ImGui or IMGUI).
