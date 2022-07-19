@@ -70,7 +70,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/f25d1e1152f95eee7f1c8b39eb6af833ac934974)
 
-- I followed along with the [ImGui Docking and Viewports] video and I was surprised it went as smoothly as it did. There was a small problem where the folder to `imgui_impl_opengl3.cpp` and `imgui_impl_glfw.cpp` had changed since the video was published, but it wasn't too difficult to find them in their new folder (`backends` instead of `examples`). I actually anticipated some things that Cherno initially forgot to do, such as adding the `ImGuiLayer` to the stack and incrementing `m_LayerInsertIndex` after adding a layer. This episode was a lot of fun!
+- I followed along with the [ImGui Docking and Viewports](https://www.youtube.com/watch?v=lZuje-3iyVE&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=22) video and I was surprised it went as smoothly as it did. There was a small problem where the folder to `imgui_impl_opengl3.cpp` and `imgui_impl_glfw.cpp` had changed since the video was published, but it wasn't too difficult to find them in their new folder (`backends` instead of `examples`). I actually anticipated some things that Cherno initially forgot to do, such as adding the `ImGuiLayer` to the stack and incrementing `m_LayerInsertIndex` after adding a layer. This episode was a lot of fun!
 
   - [commit](https://github.com/toverbay/fargrid/commit/b842c4d183de9d5b53aba493f8ded49ddc828e60)
 
