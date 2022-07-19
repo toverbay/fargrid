@@ -168,18 +168,17 @@
     <ClInclude Include="src\Fargrid\Log.h" />
     <ClInclude Include="src\Fargrid\MouseButtonCodes.h" />
     <ClInclude Include="src\Fargrid\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\fgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fargrid\Application.cpp" />
+    <ClCompile Include="src\Fargrid\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Fargrid\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Fargrid\Layer.cpp" />
     <ClCompile Include="src\Fargrid\LayerStack.cpp" />
     <ClCompile Include="src\Fargrid\Log.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\fgpch.cpp">

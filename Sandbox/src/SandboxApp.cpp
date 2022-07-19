@@ -54,7 +54,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Fargrid::ImGuiLayer());
 	}
 
 	~Sandbox()

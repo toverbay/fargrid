@@ -120,6 +120,7 @@ project "Sandbox"
     {
         "Fargrid/vendor/spdlog/include",
         "Fargrid/src",
+        "Fargrid/vendor",
         "%{IncludeDir.glm}"
     }
 

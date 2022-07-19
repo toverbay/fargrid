@@ -66,7 +66,11 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/8fb519c224cc38bae67aad07f469bdc32b7195ac)
 
-- I followed along with the [Maths](https://www.youtube.com/watch?v=Idr1G1KyPNg&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=21) to add [glm](https://glm.g-truc.net/0.9.2/api/index.html) to the library. Easy stuff, but this may get tricky to expose C# later.
+- I followed along with the [Maths](https://www.youtube.com/watch?v=Idr1G1KyPNg&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=21) to add [glm](https://glm.g-truc.net/0.9.2/api/index.html) to the library. I love math libraries and I'm excited to start using glm<sup>5</sup>.
+
+  - [commit](https://github.com/toverbay/fargrid/commit/f25d1e1152f95eee7f1c8b39eb6af833ac934974)
+
+- I followed along with the [ImGui Docking and Viewports] video and I was surprised it went as smoothly as it did. I actually anticipated some things that Cherno initially forgot to do, such as adding the `ImGuiLayer` to the stack and incrementing `m_LayerInsertIndex` after adding a layer. This episode was a lot of fun!
 
   - [commit]()
 
@@ -81,3 +85,5 @@ I am a professional software engineer working on C# and JavasScript projects and
   <sup><sup>3</sup> Unfortunately, all the key remapping code that Cherno just conveniently copied & pasted from the ImGui source was no long there, so I had to type all that out</sup> :unamused:
 
   <sup><sup>4</sup> The [FAQ](https://github.com/ocornut/imgui/blob/master/docs/FAQ.md#q-what-is-this-library-called) for the "imgui" library specifically states the name of the library is "Dear ImGui" (not ImGui or IMGUI).</sup>
+
+  <sup><sup>5</sup> Easy to add to Fargrid, but this may get tricky to expose to C# later.</sup>

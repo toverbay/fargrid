@@ -6,6 +6,8 @@
 #include "Fargrid/LayerStack.h"
 #include "Fargrid/Events/ApplicationEvent.h"
 
+#include "Fargrid/ImGui/ImGuiLayer.h"
+
 namespace Fargrid {
 
 	class FG_API Application
@@ -28,6 +30,7 @@ namespace Fargrid {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_IsRunning = true;
 		LayerStack m_LayerStack;
 
