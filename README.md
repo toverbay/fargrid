@@ -80,6 +80,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Rendering Context](https://www.youtube.com/watch?v=YZKEjaCnsjU&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=27) video to add a render or graphics context to the project. Not much changed as far as what it looks like when it runs, but it lays the foundation for abstracting away the specifics of each rendering framework (OpenGL, Vulkan, DirectX, Metal, etc).
 
+  - [commit](https://github.com/toverbay/fargrid/commit/c439e93cf5fd07ba868f09153983ad670f354202)
+
+- I followed along with the [Our First Triangle!](https://www.youtube.com/watch?v=bwFYXo0VgCc&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=28) video to render a triangle on the screen. Not much else to say... the triangle appeared in the window when I ran it...
+
   - [commit]()
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
