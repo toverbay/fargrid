@@ -74,6 +74,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/b842c4d183de9d5b53aba493f8ded49ddc828e60)
 
+- I followed along with the [Static Libraries and ZERO Warnings](https://www.youtube.com/watch?v=TlvmnoDlrI0&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=26) video to convert the project to a staic library and kind of clean up warning and stuff. All went without any problems. This is the point where I'm going to try and introduce a CLI project to be able to bind to Fargrid from a C# project. I may even create a separate fork for this stuff so I can at least continue with the video series without getting hung up on the CLI binding.
+
+  - [commit]()
+
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
 
 ###### footnotes
@@ -82,7 +86,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   <sup><sup>2</sup> I may want to investigate [Glad 2](https://gen.glad.sh/) later to see if there are any benefits to using it.</sup>
 
-  <sup><sup>3</sup> Unfortunately, all the key remapping code that Cherno just conveniently copied & pasted from the ImGui source was no long there, so I had to type all that out</sup> :unamused:
+  <sup><sup>3</sup> Unfortunately, all the key remapping code that Cherno just conveniently copied & pasted from the ImGui source was no longer there, so I had to type all that out</sup> :unamused:
 
   <sup><sup>4</sup> The [FAQ](https://github.com/ocornut/imgui/blob/master/docs/FAQ.md#q-what-is-this-library-called) for the "imgui" library specifically states the name of the library is "Dear ImGui" (not ImGui or IMGUI).</sup>
 

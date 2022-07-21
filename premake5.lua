@@ -27,9 +27,10 @@ group ""
 
 project "Fargrid"
     location "Fargrid"
-    kind "SharedLib"
+    kind "StaticLib"
     language "C++"
-    staticruntime "off"
+    cppdialect "C++17"
+    staticruntime "on"
 
     -- Doesn't work with current version of Premake
     -- externalwarnings "Off"
@@ -64,13 +65,14 @@ project "Fargrid"
         "opengl32.lib"
     }
 
+    defines
+    {
+        "_CRT_SECURE_NO_WARNINGS"
+    }
+
     filter "system:windows"
-        cppdialect "C++17"
         systemversion "latest"
-        buildoptions {
-            -- Remove this when 'externalwarnings "Off" is available'
-            "/external:W0"
-        }
+
         defines
         {
             "FG_PLATFORM_WINDOWS",
@@ -78,31 +80,38 @@ project "Fargrid"
             "GLFW_INCLUDE_NONE"
         }
 
-        postbuildcommands
-        {
-            ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
+        -- I will keep this around for possible use with the CLI project.
+        -- postbuildcommands
+        -- {
+        --     ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
+        -- }
+
+        buildoptions {
+            -- Remove this when 'externalwarnings "Off" is available'
+            -- "/external:W0"
         }
 
     filter "configurations:Debug"
         defines "FG_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "FG_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "FG_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
 project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
-    staticruntime "off"
+    cppdialect "C++17"
+    staticruntime "on"
 
     -- Doesn't work with current version of Premake
     -- externalwarnings "Off"
@@ -130,11 +139,10 @@ project "Sandbox"
     }
 
     filter "system:windows"
-        cppdialect "C++17"
         systemversion "latest"
         buildoptions {
             -- Remove this when 'externalwarnings "Off" is available'
-            "/external:W0"
+            -- "/external:W0"
         }
 
         defines
@@ -145,14 +153,14 @@ project "Sandbox"
     filter "configurations:Debug"
         defines "FG_DEBUG"
         runtime "Debug"
-        symbols "On"
+        symbols "on"
 
     filter "configurations:Release"
         defines "FG_RELEASE"
         runtime "Release"
-        optimize "On"
+        optimize "on"
 
     filter "configurations:Dist"
         defines "FG_DIST"
         runtime "Release"
-        optimize "On"
+        optimize "on"
