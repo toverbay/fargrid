@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Fargrid/Window.h"
+#include "Fargrid/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
+
 
 namespace Fargrid {
 
@@ -29,12 +31,14 @@ namespace Fargrid {
 
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
 			std::string Title;
-			unsigned int Width, Height;
-			bool VSync;
+			unsigned int Width = 0;
+			unsigned int Height = 0;
+			bool VSync = false;
 
 			EventCallbackFn EventCallback;
 		};

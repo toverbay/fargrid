@@ -76,6 +76,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Static Libraries and ZERO Warnings](https://www.youtube.com/watch?v=TlvmnoDlrI0&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=26) video to convert the project to a staic library and kind of clean up warning and stuff. All went without any problems. This is the point where I'm going to try and introduce a CLI project to be able to bind to Fargrid from a C# project. I may even create a separate fork for this stuff so I can at least continue with the video series without getting hung up on the CLI binding.
 
+  - [commit](https://github.com/toverbay/fargrid/commit/bd239ad2ebb0db444db1343578ed9aeb0e6b5cfe)
+
+- I followed along with the [Rendering Context](https://www.youtube.com/watch?v=YZKEjaCnsjU&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=27) video to add a render or graphics context to the project. Not much changed as far as what it looks like when it runs, but it lays the foundation for abstracting away the specifics of each rendering framework (OpenGL, Vulkan, DirectX, Metal, etc).
+
   - [commit]()
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.

@@ -158,7 +158,9 @@
     <ClInclude Include="src\Fargrid\LayerStack.h" />
     <ClInclude Include="src\Fargrid\Log.h" />
     <ClInclude Include="src\Fargrid\MouseButtonCodes.h" />
+    <ClInclude Include="src\Fargrid\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Fargrid\Window.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\fgpch.h" />
@@ -170,6 +172,7 @@
     <ClCompile Include="src\Fargrid\Layer.cpp" />
     <ClCompile Include="src\Fargrid\LayerStack.cpp" />
     <ClCompile Include="src\Fargrid\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\fgpch.cpp">
