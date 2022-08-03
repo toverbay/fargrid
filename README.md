@@ -84,6 +84,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Our First Triangle!](https://www.youtube.com/watch?v=bwFYXo0VgCc&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=28) video to render a triangle on the screen. Not much else to say... the triangle appeared in the window when I ran it...
 
+  - [commit](https://github.com/toverbay/fargrid/commit/14e140d0da443ab0210bc19718a684ef3be9078e)
+
+- I followed along with the [OpenGL Shaders](https://www.youtube.com/watch?v=QBCCHm_9HV8&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=29) video to add vertex & fragment shaders to the project.
+
   - [commit]()
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
