@@ -74,6 +74,9 @@
     <ClInclude Include="src\Fargrid\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Fargrid\Renderer\Shader.h" />
+    <ClInclude Include="src\Fargrid\Renderer\Buffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Fargrid\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fargrid\Application.cpp">
@@ -103,5 +106,8 @@
     <ClCompile Include="src\fgpch.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Fargrid\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Fargrid\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Fargrid\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>

@@ -88,6 +88,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [OpenGL Shaders](https://www.youtube.com/watch?v=QBCCHm_9HV8&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=29) video to add vertex & fragment shaders to the project.
 
+  - [commit](https://github.com/toverbay/fargrid/commit/26090c9c1d90650fa210428c007731f5bf38cec4)
+
+- I followed along with the [Renderer API Abstraction](https://www.youtube.com/watch?v=BwCqRqqbB1Y&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=30) video to add the foundation abstracting away the details of each renderer API *(OpenGL, DirectX, Vulcan, etc)*. Looks exactly the same as the previous commit during runtime, but now we can choose the implementation of vertex & index buffers based on the chosen Renderer API. Other abstractions will be added in later videos.
+
   - [commit]()
 
 - I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
