@@ -98,9 +98,9 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/c88cc34aaa676ae803c9ee67d58f5faa258e34e4)
 
-- I followed along with the [Vertex Arrays]<https://www.youtube.com/watch?v=rkxrw8dNrvI&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=32>) video to implement API-agnostic vertex arrays. I started pausing the video to try to implement the code before Cherno did. Worked out well. I'm definitely getting more comfortable writing this kind of code. I even anticipated some things before he did in the video. I'm still having fun with this.
+- I followed along with the [Vertex Arrays](https://www.youtube.com/watch?v=rkxrw8dNrvI&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=32) video to implement API-agnostic vertex arrays. I started pausing the video to try to implement the code before Cherno did. Worked out well. I'm definitely getting more comfortable writing this kind of code. I even anticipated some things before he did in the video. I'm still having a lot of fun with this.
 
-  - [commit]()
+  - [commit](https://github.com/toverbay/fargrid/commit/2687a80e7a9f88b53e277b91d13acef35cc04b5f)
 
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~
 - I looked ahead at future episodes and saw that Cherno intends on adding C# scripting support. Instead, I thought I'd try creating a version of this game engine written in **[Odin](https://odin-lang.org/)**.
