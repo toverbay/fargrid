@@ -74,7 +74,7 @@ namespace Fargrid {
 				ShaderDataTypeToOpenGLBaseType(element.Type),
 				element.Normalized ? GL_TRUE : GL_FALSE,
 				layout.GetStride(),
-				(const void*)(INT_PTR)element.Offset);
+				(const void*)(UINT_PTR)element.Offset);
 			elementIndex++;
 		}
 

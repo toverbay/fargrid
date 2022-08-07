@@ -96,7 +96,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Vertex Buffer Layouts](https://www.youtube.com/watch?v=jIJFM_pi6gQ&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=31) video to add an elegant way to specify the layout of vertex buffers. I quite enjoyed this one, although I had to deal with one small issue<sup>6</sup>.
 
-  - [commit]()
+  - [commit](https://github.com/toverbay/fargrid/commit/c88cc34aaa676ae803c9ee67d58f5faa258e34e4)
 
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~
 - I looked ahead at future episodes and saw that Cherno intends on adding C# scripting support. Instead, I thought I'd try creating a version of this game engine written in **[Odin](https://odin-lang.org/)**.
@@ -113,4 +113,4 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   <sup><sup>5</sup> Easy to add to Fargrid, but this may get tricky to expose to C# later.</sup>
 
-  <sup><sup>6</sup> In `Application.cpp` inside the element loop for the layout, casting the element offset to a void point (`(const void*)element.Offset`). After a bit of Googling, it seems like it's easy to fix with a double cast (`(const void*)(INT_PTR)element.Offset`).</sup>
+  <sup><sup>6</sup> In `Application.cpp` inside the element loop for the layout, casting the element offset to a void point (`(const void*)element.Offset`). After a bit of Googling, it seems like it's easy to fix with a double cast (`(const void*)(UINT_PTR)element.Offset`).</sup>
