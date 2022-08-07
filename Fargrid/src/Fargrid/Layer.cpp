@@ -8,8 +8,4 @@ namespace Fargrid {
 	{
 	}
 
-	Layer::~Layer()
-	{
-	}
-
 }

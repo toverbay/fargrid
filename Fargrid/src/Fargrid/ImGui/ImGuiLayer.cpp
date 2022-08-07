@@ -91,8 +91,4 @@ namespace Fargrid {
 		}
 	}
 
-	ImGuiLayer::~ImGuiLayer()
-	{
-	}
-
 }

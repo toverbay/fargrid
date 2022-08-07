@@ -92,9 +92,14 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Renderer API Abstraction](https://www.youtube.com/watch?v=BwCqRqqbB1Y&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=30) video to add the foundation abstracting away the details of each renderer API *(OpenGL, DirectX, Vulcan, etc)*. Looks exactly the same as the previous commit during runtime, but now we can choose the implementation of vertex & index buffers based on the chosen Renderer API. Other abstractions will be added in later videos.
 
+  - [commit](https://github.com/toverbay/fargrid/commit/8718e089d6d58d15a0b16173192096386725bad7)
+
+- I followed along with the [Vertex Buffer Layouts](https://www.youtube.com/watch?v=jIJFM_pi6gQ&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=31) video to add an elegant way to specify the layout of vertex buffers. I quite enjoyed this one, although I had to deal with one small issue<sup>6</sup>.
+
   - [commit]()
 
-- I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.
+- ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~
+- I looked ahead at future episodes and saw that Cherno intends on adding C# scripting support. Instead, I thought I'd try creating a version of this game engine written in **[Odin](https://odin-lang.org/)**.
 
 ###### footnotes
 
@@ -107,3 +112,5 @@ I am a professional software engineer working on C# and JavasScript projects and
   <sup><sup>4</sup> The [FAQ](https://github.com/ocornut/imgui/blob/master/docs/FAQ.md#q-what-is-this-library-called) for the "imgui" library specifically states the name of the library is "Dear ImGui" (not ImGui or IMGUI).</sup>
 
   <sup><sup>5</sup> Easy to add to Fargrid, but this may get tricky to expose to C# later.</sup>
+
+  <sup><sup>6</sup> In `Application.cpp` inside the element loop for the layout, casting the element offset to a void point (`(const void*)element.Offset`). After a bit of Googling, it seems like it's easy to fix with a double cast (`(const void*)(INT_PTR)element.Offset`).</sup>
