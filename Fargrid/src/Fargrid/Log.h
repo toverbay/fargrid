@@ -26,11 +26,11 @@ namespace Fargrid {
 #define FG_CORE_INFO(...)  ::Fargrid::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define FG_CORE_WARN(...)  ::Fargrid::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define FG_CORE_ERROR(...) ::Fargrid::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define FG_CORE_FATAL(...) ::Fargrid::Log::GetCoreLogger()->critical(__VA_ARGS__)
+#define FG_CORE_CRITICAL(...) ::Fargrid::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client logging macros
 #define FG_TRACE(...)      ::Fargrid::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define FG_INFO(...)       ::Fargrid::Log::GetClientLogger()->info(__VA_ARGS__)
 #define FG_WARN(...)       ::Fargrid::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define FG_ERROR(...)      ::Fargrid::Log::GetClientLogger()->error(__VA_ARGS__)
-#define FG_FATAL(...)      ::Fargrid::Log::GetClientLogger()->critical(__VA_ARGS__)
+#define FG_CRITICAL(...)      ::Fargrid::Log::GetClientLogger()->critical(__VA_ARGS__)

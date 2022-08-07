@@ -117,4 +117,4 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   <sup><sup>5</sup> Easy to add to Fargrid, but this may get tricky to expose to C# later.</sup>
 
-  <sup><sup>6</sup> In `Application.cpp` inside the element loop for the layout, casting the element offset to a void pointer `(const void*)element.Offset`. After a bit of Googling, it seems like it's easy to fix with a double cast `(const void*)(UINT_PTR)element.Offset`.</sup>
+  <sup><sup>6</sup> In `Application.cpp` inside the element loop for the layout, casting the element offset to a void pointer `(const void*)element.Offset` caused a [C4312 warning](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4312). After a bit of Googling, it seems like it's easy to fix with a double cast `(const void*)(UINT_PTR)element.Offset`.</sup>
