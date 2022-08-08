@@ -74,7 +74,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/b842c4d183de9d5b53aba493f8ded49ddc828e60)
 
-- I followed along with the [Static Libraries and ZERO Warnings](https://www.youtube.com/watch?v=TlvmnoDlrI0&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=26) video to convert the project to a staic library and kind of clean up warning and stuff. All went without any problems. This is the point where I'm going to try and introduce a CLI project to be able to bind to Fargrid from a C# project. I may even create a separate fork for this stuff so I can at least continue with the video series without getting hung up on the CLI binding.
+- I followed along with the [Static Libraries and ZERO Warnings](https://www.youtube.com/watch?v=TlvmnoDlrI0&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=26) video to convert the project to a staic library and kind of clean up warning and stuff. All went without any problems. ~~This is the point where I'm going to try and introduce a CLI project to be able to bind to Fargrid from a C# project. I may even create a separate fork for this stuff so I can at least continue with the video series without getting hung up on the CLI binding.~~
 
   - [commit](https://github.com/toverbay/fargrid/commit/bd239ad2ebb0db444db1343578ed9aeb0e6b5cfe)
 
@@ -102,9 +102,9 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/2687a80e7a9f88b53e277b91d13acef35cc04b5f)
 
-- I followed along with the [Renderer Float and Submission] video to implement the API-agnostic `RenderCommand` and `RendererAPI` classes (and the OpenGL implementation). Saw an interesting comment about using the `final` keyword on sub-classes as sort of a mini optimization. I tried it and... it works... not sure if it's any faster, but it didn't crash. Also, I really hate the function name `Submit`. Maybe `Commit` or `Deliver` or simply `Render`? I'll have to figure out a better name.
+- I followed along with the [Renderer Flow and Submission](https://www.youtube.com/watch?v=akxevYYWd9g&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=33) video to implement the API-agnostic `RenderCommand` and `RendererAPI` classes (and the OpenGL implementation). Saw an interesting comment about using the `final` keyword on sub-classes as sort of a mini optimization. I tried it and... it works... not sure if it's any faster, but it didn't crash. Also, I really hate the function name `Submit`. Maybe `Commit` or `Deliver` or simply `Render`? I'll have to figure out a better name.
 
-  - [commit]()
+  - [commit](https://github.com/toverbay/fargrid/commit/4b4d46b4c1d31f502f7edfc8b9fd2fd41f452689)
 
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~
 - I looked ahead at future episodes and saw that Cherno intends on adding C# scripting support. Instead, I thought I'd try creating a version of this game engine written in **[Odin](https://odin-lang.org/)**.
