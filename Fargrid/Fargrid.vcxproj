@@ -160,6 +160,7 @@
     <ClInclude Include="src\Fargrid\MouseButtonCodes.h" />
     <ClInclude Include="src\Fargrid\Renderer\Buffer.h" />
     <ClInclude Include="src\Fargrid\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Fargrid\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Fargrid\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Fargrid\Renderer\Renderer.h" />
     <ClInclude Include="src\Fargrid\Renderer\RendererAPI.h" />
@@ -182,6 +183,7 @@
     <ClCompile Include="src\Fargrid\LayerStack.cpp" />
     <ClCompile Include="src\Fargrid\Log.cpp" />
     <ClCompile Include="src\Fargrid\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Fargrid\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Fargrid\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Fargrid\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Fargrid\Renderer\RendererAPI.cpp" />

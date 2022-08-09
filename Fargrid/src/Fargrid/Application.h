@@ -11,6 +11,7 @@
 #include "Fargrid/Renderer/Shader.h"
 #include "Fargrid/Renderer/Buffer.h"
 #include "Fargrid/Renderer/VertexArray.h"
+#include "Fargrid/Renderer/OrthographicCamera.h"
 
 namespace Fargrid {
 
@@ -44,6 +45,8 @@ namespace Fargrid {
 	private:
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 
 	private:
 		static Application* s_Instance;

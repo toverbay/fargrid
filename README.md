@@ -106,6 +106,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/4b4d46b4c1d31f502f7edfc8b9fd2fd41f452689)
 
+- I followed along with the [Creating an Orthographic Camera](https://www.youtube.com/watch?v=NjKv-HWstxA&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=35) video to implement an orthographic camera. A moment of confusion when I tried to be clever and add `near` and `far` parameters with default values to the constructor. Apparently, the signature defined in the header cannot be the same as the signature in the definition. That took a few minutes of frustrated Googling to figure out. A small moment of triumph when I immediately figured out why he was getting a blank screen after he commented out the code to set the camera position. I changed the names in a few places to make things more obvious, like `SetRotationZ` instead of just `SetRotation` and `m_RotationZDeg` instead of `m_Rotation`.
+
+  - [commit]()
+
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~
 - I looked ahead at future episodes and saw that Cherno intends on adding C# scripting support. Instead, I thought I'd try creating a version of this game engine written in **[Odin](https://odin-lang.org/)**.
 
