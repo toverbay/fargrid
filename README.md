@@ -108,6 +108,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Creating an Orthographic Camera](https://www.youtube.com/watch?v=NjKv-HWstxA&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=35) video to implement an orthographic camera. A moment of confusion when I tried to be clever and add `near` and `far` parameters with default values to the constructor. Apparently, the signature defined in the header cannot be the same as the signature in the definition. That took a few minutes of frustrated Googling to figure out. A small moment of triumph when I immediately figured out why he was getting a blank screen after he commented out the code to set the camera position. I changed the names in a few places to make things more obvious, like `SetRotationZ` instead of just `SetRotation` and `m_RotationZDeg` instead of `m_Rotation`.
 
+  - [commit](https://github.com/toverbay/fargrid/commit/fcb7c05b0064df9cf3b73e190991bb72eabd49dd)
+
+- I followed along with the [Moving to Sandbox](https://www.youtube.com/watch?v=4zj-0FQ7Xbg&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=36) video to move code from the Application to the Sandbox app. Again, I paused the video after Cherno announced what he planned to do, then wrote the code before resuming the video. I'm definitely getting more comfortable with this.
+
   - [commit]()
 
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~

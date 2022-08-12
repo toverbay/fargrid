@@ -8,11 +8,6 @@
 
 #include "Fargrid/ImGui/ImGuiLayer.h"
 
-#include "Fargrid/Renderer/Shader.h"
-#include "Fargrid/Renderer/Buffer.h"
-#include "Fargrid/Renderer/VertexArray.h"
-#include "Fargrid/Renderer/OrthographicCamera.h"
-
 namespace Fargrid {
 
 	class FG_API Application
@@ -38,15 +33,6 @@ namespace Fargrid {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_IsRunning = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-	private:
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
 
 	private:
 		static Application* s_Instance;
