@@ -1,8 +1,8 @@
 #include "fgpch.h"
 #include "OpenGLShader.h"
 
-#include <glad/glad.h>
 #include <glm/gtc/type_ptr.hpp>
+#include <glad/glad.h>
 
 namespace Fargrid {
 
@@ -127,72 +127,83 @@ namespace Fargrid {
 
 	void OpenGLShader::UploadUniformMat3(const std::string& name, const glm::mat3& matrix)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniformMatrix3fv(location, 1, false, glm::value_ptr(matrix));
 	}
 
 	void OpenGLShader::UploadUniformMat4(const std::string& name, const glm::mat4& matrix)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniformMatrix4fv(location, 1, false, glm::value_ptr(matrix));
 	}
 
 	void OpenGLShader::UploadUniformFloat(const std::string& name, float value)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniform1f(location, value);
 	}
 
 	void OpenGLShader::UploadUniformFloat2(const std::string& name, const glm::vec2 values)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniform2f(location, values.x, values.y);
 	}
 
 	void OpenGLShader::UploadUniformFloat3(const std::string& name, const glm::vec3 values)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniform3f(location, values.x, values.y, values.z);
 	}
 
 	void OpenGLShader::UploadUniformFloat4(const std::string& name, const glm::vec4 values)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniform4f(location, values.x, values.y, values.z, values.w);
 	}
 
 	void OpenGLShader::UploadUniformInt(const std::string& name, int value)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniform1i(location, value);
 	}
 
 	void OpenGLShader::UploadUniformInt2(const std::string& name, const glm::i32vec2 values)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniform2i(location, values.x, values.y);
 	}
 
 	void OpenGLShader::UploadUniformInt3(const std::string& name, const glm::i32vec3 values)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniform3i(location, values.x, values.y, values.z);
 	}
 
 	void OpenGLShader::UploadUniformInt4(const std::string& name, const glm::i32vec4 values)
 	{
-		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		GLint location = GetUniformLocation(name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniform4i(location, values.x, values.y, values.z, values.w);
+	}
+
+	GLint OpenGLShader::GetUniformLocation(const std::string& name) const
+	{
+		if (m_UniformLocationCache.find(name) != m_UniformLocationCache.end())
+			return m_UniformLocationCache[name];
+
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		m_UniformLocationCache[name] = location;
+
+		return location;
 	}
 
 }

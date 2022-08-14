@@ -130,7 +130,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Shader Abstraction and Uniforms](https://www.youtube.com/watch?v=d5wL6eZnWMU&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=40) video to move more OpenGL code from the shader class to the platform-specific implementation. More work needs to be done with other systems before we can really make the shader class abstract. He mentioned an optimization by caching the uniform locations with a hashmap and pointed to another [video in his OpenGL series](https://www.youtube.com/watch?v=nBB0LGSIm5Q) to do that. I think I'll watch that video and add it to Fargrid as well.
 
-  - [commit]()
+  - [commit](https://github.com/toverbay/fargrid/commit/a9b5d9910ffc96b4b2043d07b5ed4d6f2d0820d9)
 
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~
 - I looked ahead at future episodes and saw that Cherno intends on adding C# scripting support. Instead, I thought I'd try creating a version of this game engine written in **[Odin](https://odin-lang.org/)**.

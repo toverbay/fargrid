@@ -3,7 +3,11 @@
 #include "Fargrid/Renderer/Shader.h"
 
 #include <string>
+#include <unordered_map>
+
 #include <glm/glm.hpp>
+
+typedef int GLint;
 
 namespace Fargrid {
 
@@ -27,8 +31,12 @@ namespace Fargrid {
 		void UploadUniformInt3(const std::string& name, const glm::i32vec3 values);
 		void UploadUniformInt4(const std::string& name, const glm::i32vec4 values);
 
+		GLint GetUniformLocation(const std::string& name) const;
 	private:
 		uint32_t m_RendererID;
+
+	private:
+		mutable std::unordered_map<std::string, GLint> m_UniformLocationCache;
 	};
 
 }
