@@ -127,10 +127,16 @@ namespace Fargrid {
 
 	void Shader::UploadUniformMat4(const std::string& name, const glm::mat4& matrix)
 	{
-		glUseProgram(m_RendererID);
 		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
 		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
 		glUniformMatrix4fv(location, 1, false, glm::value_ptr(matrix));
+	}
+
+	void Shader::UploadUniformFloat4(const std::string& name, const glm::vec4 values)
+	{
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		FG_CORE_ASSERT(location >= 0, "Uniform does not exist!");
+		glUniform4f(location, values.x, values.y, values.z, values.w);
 	}
 
 }

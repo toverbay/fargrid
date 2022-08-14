@@ -120,6 +120,12 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Transforms](https://www.youtube.com/watch?v=cbB2fh0UxZ0&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=38) video to add transforms that allow objects in the scene to have their own translation, rotation, and scale. We used this to draw a grid of squares on the screen, which is basically a tilemap without the textures. Very cool.
 
+  - [commit](https://github.com/toverbay/fargrid/commit/f528052996b9f9907a8a2b7ed768e7d4230676b2)
+
+- I followed along with the [Material Systems](https://www.youtube.com/watch?v=2k5FjtMNQsM&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=39) video where Cherno explained material systems. He didn't actually implement a material system in the video. Instead, he added the ability to upload & use a color in a shader. Not terribly useful yet, but I did modify his code slightly to draw a checkerboard pattern.
+
+  The more interesting thing about this video is at the very end when he put forth the question to continue the series as a fully 3D engine or switch to a "blazingly fast" 2D engine. Having watched the later videos, I know the decision was made to go 2D. I'm interested in making a 2D game, so I was ok with that. However, I wonder if maybe the better decision was to continue in 3D to teach all the aspects of a game engine rather than the more narrowly-focused 2D. I mean, 2D is just a subset of 3D, right? Sure, there are optimizations that are specific to 2D rendering, but I feel those could be taught as separate videos within the overall series. The sponsored version of his game engine is fully 3D and I intend on sponsoring him to get access to it, so I suppose it's not that big of a deal. Anyways...
+
   - [commit]()
 
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~

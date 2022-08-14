@@ -91,7 +91,7 @@ public:
 
 		m_Shader.reset(new Fargrid::Shader(vertexSrc, fragmentSrc));
 
-		std::string blueShaderVertexSrc = R"(
+		std::string flatColorShaderVertexSrc = R"(
 	#version 450 core
 
 	layout(location = 0) in vec3 a_Position;
@@ -99,29 +99,26 @@ public:
 	uniform mat4 u_ViewProjection;
 	uniform mat4 u_Transform;
 
-	out vec3 v_Position;
-
 	void main()
 	{
-		v_Position = a_Position;
 		gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
 	}			
 )";
 
-		std::string blueShaderFragmentSrc = R"(
+		std::string flatColorShaderFragmentSrc = R"(
 	#version 450 core
 
 	layout(location = 0) out vec4 color;
 
-	in vec3 v_Position;
+	uniform vec4 u_Color;
 
 	void main()
 	{
-		color = vec4(0.2, 0.3, 0.8, 1.0);
+		color = u_Color;
 	}			
 )";
 
-		m_BlueShader.reset(new Fargrid::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
+		m_FlatColorShader.reset(new Fargrid::Shader(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
 	}
 
 	void OnUpdate(Fargrid::Timestep ts) override
@@ -155,13 +152,20 @@ public:
 		{
 			static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
+			glm::vec4 redColor(0.8f, 0.2f, 0.3f, 1.0f);
+			glm::vec4 blueColor(0.2f, 0.3f, 0.8f, 1.0f);
+
 			for (int y = -6; y < 6; y++)
 			{
 				for (int x = -6; x < 6; x++)
 				{
 					glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
 					glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
-					Fargrid::Renderer::Submit(m_BlueShader, m_SquareVA, transform);
+					if ((x + y) % 2 == 0) // Checkerboard pattern
+						m_FlatColorShader->UploadUniformFloat4("u_Color", redColor);
+					else
+						m_FlatColorShader->UploadUniformFloat4("u_Color", blueColor);
+					Fargrid::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
 				}
 			}
 
@@ -190,7 +194,7 @@ private:
 	std::shared_ptr<Fargrid::Shader> m_Shader;
 	std::shared_ptr<Fargrid::VertexArray> m_VertexArray;
 
-	std::shared_ptr<Fargrid::Shader> m_BlueShader;
+	std::shared_ptr<Fargrid::Shader> m_FlatColorShader;
 	std::shared_ptr<Fargrid::VertexArray> m_SquareVA;
 
 	Fargrid::OrthographicCamera m_Camera;
