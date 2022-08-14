@@ -7,6 +7,9 @@
 
 #include "Input.h"
 
+// TODO: Remove when we implement Platform::GetTime();
+#include <GLFW/glfw3.h>
+
 namespace Fargrid {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -15,10 +18,13 @@ namespace Fargrid {
 
 	Application::Application()
 	{
+		m_LastFrameTime = glfwGetTime();
+
 		FG_CORE_ASSERT(s_Instance == nullptr, "Application already exists!");
 		s_Instance = this;
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+		m_Window->SetVSync(true);
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
@@ -51,10 +57,14 @@ namespace Fargrid {
 	{
 		while (m_IsRunning)
 		{
+			float time = (float)glfwGetTime(); // TODO: Platform::GetTime()
+			Timestep timestep = time - m_LastFrameTime;
+			m_LastFrameTime = time;
+
 			RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 
 			for (Layer* layer : m_LayerStack)
-				layer->OnUpdate();
+				layer->OnUpdate(timestep);
 
 			m_ImGuiLayer->Begin();
 			for (Layer* layer : m_LayerStack)

@@ -6,6 +6,7 @@
 #include "Fargrid/Layer.h"
 #include "Fargrid/Log.h"
 
+#include "Fargrid/Core/Timestep.h"
 #include "Fargrid/Input.h"
 #include "Fargrid/KeyCodes.h"
 #include "Fargrid/MouseButtonCodes.h"

@@ -6,6 +6,8 @@
 #include "Fargrid/LayerStack.h"
 #include "Fargrid/Events/ApplicationEvent.h"
 
+#include "Fargrid/Core/Timestep.h"
+
 #include "Fargrid/ImGui/ImGuiLayer.h"
 
 namespace Fargrid {
@@ -29,10 +31,12 @@ namespace Fargrid {
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_IsRunning = true;
 		LayerStack m_LayerStack;
+		float m_LastFrameTime = 0.0f;
 
 	private:
 		static Application* s_Instance;

@@ -120,22 +120,27 @@ public:
 		m_BlueShader.reset(new Fargrid::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
 	}
 
-	void OnUpdate() override
+	void OnUpdate(Fargrid::Timestep ts) override
 	{
+		float time = ts;
+
+		// For debugging...
+		// FG_TRACE("Delta time: {0}s ({1}ms)", time, ts.GetMilliseconds());
+
 		if (Fargrid::Input::IsKeyPressed(FG_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed;
+			m_CameraPosition.x -= m_CameraMoveSpeed * time;
 		else if (Fargrid::Input::IsKeyPressed(FG_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed;
+			m_CameraPosition.x += m_CameraMoveSpeed * time;
 
 		if (Fargrid::Input::IsKeyPressed(FG_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed;
+			m_CameraPosition.y += m_CameraMoveSpeed * time;
 		else if (Fargrid::Input::IsKeyPressed(FG_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed;
+			m_CameraPosition.y -= m_CameraMoveSpeed * time;
 
 		if (Fargrid::Input::IsKeyPressed(FG_KEY_A))
-			m_CameraZRotationDeg += m_CameraRotationSpeed;
+			m_CameraZRotationDeg += m_CameraRotationSpeed * time;
 		else if (Fargrid::Input::IsKeyPressed(FG_KEY_D))
-			m_CameraZRotationDeg -= m_CameraRotationSpeed;
+			m_CameraZRotationDeg -= m_CameraRotationSpeed * time;
 
 		Fargrid::RenderCommand::Clear();
 
@@ -176,8 +181,8 @@ private:
 	Fargrid::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
 	float m_CameraZRotationDeg = 0.0f;
-	float m_CameraMoveSpeed = 0.035f;
-	float m_CameraRotationSpeed = 1.0f;
+	float m_CameraMoveSpeed = 3.5f;			// units/second
+	float m_CameraRotationSpeed = 180.0f;	// degrees/second
 };
 
 class Sandbox : public Fargrid::Application

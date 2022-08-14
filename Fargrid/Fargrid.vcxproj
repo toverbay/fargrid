@@ -146,6 +146,7 @@
     <ClInclude Include="src\Fargrid.h" />
     <ClInclude Include="src\Fargrid\Application.h" />
     <ClInclude Include="src\Fargrid\Core.h" />
+    <ClInclude Include="src\Fargrid\Core\Timestep.h" />
     <ClInclude Include="src\Fargrid\EntryPoint.h" />
     <ClInclude Include="src\Fargrid\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Fargrid\Events\Event.h" />

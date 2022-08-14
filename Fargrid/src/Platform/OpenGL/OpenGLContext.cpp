@@ -15,6 +15,7 @@ namespace Fargrid {
 	{
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		glfwSwapInterval(1);
 		FG_CORE_ASSERT(status, "Failed to initialize Glad!");
 
 		FG_CORE_INFO("OpenGL Info:");

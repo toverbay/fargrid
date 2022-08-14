@@ -2,6 +2,7 @@
 
 #include "Fargrid/Core.h"
 #include "Fargrid/Events/Event.h"
+#include "Fargrid/Core/Timestep.h"
 
 namespace Fargrid {
 
@@ -13,7 +14,7 @@ namespace Fargrid {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 

@@ -26,7 +26,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
 - I followed along with the [Event System](https://www.youtube.com/watch?v=xnopUoZbMEk&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=9) video. It was frustrating at first because I made a really dumb mistake<sup>1</sup>, but I worked it out.
 
-  A continuing source of frustration is that compiler warnings for external includes keep appearing. The `/external:W0` compiler option doesn't seem to work. I either didn't configured it correctly for Premake, I don't completely understand how it's supposed to work, or it just plain doesn't work. I also discovered the [externalwarnings](https://premake.github.io/docs/externalwarnings/) option for Premake, but it just crashed Premake when I tried to use it. *sigh*
+  A continuing source of frustration is that compiler warnings for external includes keep appearing. The `/external:W0` compiler option doesn't seem to work. I either didn't configure it correctly for Premake, I don't completely understand how it's supposed to work, or it just plain doesn't work. I also discovered the [externalwarnings](https://premake.github.io/docs/externalwarnings/) option for Premake, but it just crashed Premake when I tried to use it. \*sigh\*
 
   - [commit](https://github.com/toverbay/fargrid/commit/f9f95b16cdff48b428dbb8ce8de859b905010a64)
 
@@ -66,7 +66,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/8fb519c224cc38bae67aad07f469bdc32b7195ac)
 
-- I followed along with the [Maths](https://www.youtube.com/watch?v=Idr1G1KyPNg&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=21) to add [glm](https://glm.g-truc.net/0.9.2/api/index.html) to the library. I love math libraries and I'm excited to start using glm<sup>5</sup>.
+- I followed along with the [Maths](https://www.youtube.com/watch?v=Idr1G1KyPNg&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=21) to add [glm](https://glm.g-truc.net/0.9.2/api/index.html) to the library. I love math libraries and I'm excited to start using glm, but I kinda want to implement my own math library.<sup>5</sup>.
 
   - [commit](https://github.com/toverbay/fargrid/commit/f25d1e1152f95eee7f1c8b39eb6af833ac934974)
 
@@ -74,7 +74,7 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/b842c4d183de9d5b53aba493f8ded49ddc828e60)
 
-- I followed along with the [Static Libraries and ZERO Warnings](https://www.youtube.com/watch?v=TlvmnoDlrI0&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=26) video to convert the project to a staic library and kind of clean up warning and stuff. All went without any problems. ~~This is the point where I'm going to try and introduce a CLI project to be able to bind to Fargrid from a C# project. I may even create a separate fork for this stuff so I can at least continue with the video series without getting hung up on the CLI binding.~~
+- I followed along with the [Static Libraries and ZERO Warnings](https://www.youtube.com/watch?v=TlvmnoDlrI0&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=26) video to convert the project to a staic library and kind of clean up warnings and stuff. All went well. ~~This is the point where I'm going to try and introduce a CLI project to be able to bind to Fargrid from a C# project. I may even create a separate fork for this stuff so I can at least continue with the video series without getting hung up on the CLI binding.~~
 
   - [commit](https://github.com/toverbay/fargrid/commit/bd239ad2ebb0db444db1343578ed9aeb0e6b5cfe)
 
@@ -106,11 +106,15 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/4b4d46b4c1d31f502f7edfc8b9fd2fd41f452689)
 
-- I followed along with the [Creating an Orthographic Camera](https://www.youtube.com/watch?v=NjKv-HWstxA&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=35) video to implement an orthographic camera. A moment of confusion when I tried to be clever and add `near` and `far` parameters with default values to the constructor. Apparently, the signature defined in the header cannot be the same as the signature in the definition. That took a few minutes of frustrated Googling to figure out. A small moment of triumph when I immediately figured out why he was getting a blank screen after he commented out the code to set the camera position. I changed the names in a few places to make things more obvious, like `SetRotationZ` instead of just `SetRotation` and `m_RotationZDeg` instead of `m_Rotation`.
+- I followed along with the [Creating an Orthographic Camera](https://www.youtube.com/watch?v=NjKv-HWstxA&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=35) video to implement an orthographic camera. I had a moment of confusion when I tried to be clever and add `near` and `far` parameters with default values to the constructor. This is trivial to do in C#, but apparently in C/C++, the signature defined in the header cannot be the same as the signature in the definition. That took a few minutes of frustrated Googling to figure out. I also had a small moment of satisfaction when I immediately figured out why he was getting a blank screen after he commented out the code to set the camera position. I changed the names in a few places to make things more obvious, like `SetRotationZ` instead of just `SetRotation` and `m_RotationZDeg` instead of `m_Rotation`. Probably makes it less readable... might change it back...
 
   - [commit](https://github.com/toverbay/fargrid/commit/fcb7c05b0064df9cf3b73e190991bb72eabd49dd)
 
 - I followed along with the [Moving to Sandbox](https://www.youtube.com/watch?v=4zj-0FQ7Xbg&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=36) video to move code from the Application to the Sandbox app. Again, I paused the video after Cherno announced what he planned to do, then wrote the code before resuming the video. I'm definitely getting more comfortable with this.
+
+  - [commit](https://github.com/toverbay/fargrid/commit/8fdb00fccd9ef4876ccc2a36c968f94b44ec21e4)
+
+- I followed along with the [TIMESTEPS and DELTA TIME](https://www.youtube.com/watch?v=pctGOMDW-HQ&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=37) video to add a rather primitive timing mechanism to the engine. Cherno did mention that more functionality will be added to it later, but I couldn't help thinking about an [old blog post](https://gafferongames.com/post/fix_your_timestep/) I read about timing in games, particularly with game physics. Rendering should go as fast as the monitor's refresh rate (to avoid tearing), but physics integration frames should run at a predictable (and often slower) rate. The most popular comment from the video also mentions this. For now, I'm going to trust that Cherno knows what he's doing, but I will re-visit this later.
 
   - [commit]()
 
