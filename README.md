@@ -102,11 +102,11 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/2687a80e7a9f88b53e277b91d13acef35cc04b5f)
 
-- I followed along with the [Renderer Flow and Submission](https://www.youtube.com/watch?v=akxevYYWd9g&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=33) video to implement the API-agnostic `RenderCommand` and `RendererAPI` classes (and the OpenGL implementation). Saw an interesting comment about using the `final` keyword on sub-classes as sort of a mini optimization. I tried it and... it works... not sure if it's any faster, but it didn't crash. Also, I really hate the function name `Submit`. Maybe `Commit` or `Deliver` or simply `Render`? I'll have to figure out a better name.
+- I followed along with the [Renderer Flow and Submission](https://www.youtube.com/watch?v=akxevYYWd9g&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=33) video to implement the API-agnostic `RenderCommand` and `RendererAPI` classes (and the OpenGL implementation). Saw an interesting comment about using the `final` keyword on sub-classes as sort of a mini optimization<sup>7</sup>. Also, I really hate the function name `Submit`<sup>8</sup>.
 
   - [commit](https://github.com/toverbay/fargrid/commit/4b4d46b4c1d31f502f7edfc8b9fd2fd41f452689)
 
-- I followed along with the [Creating an Orthographic Camera](https://www.youtube.com/watch?v=NjKv-HWstxA&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=35) video to implement an orthographic camera. I had a moment of confusion when I tried to be clever and add `near` and `far` parameters with default values to the constructor. This is trivial to do in C#, but apparently in C/C++, the signature defined in the header cannot be the same as the signature in the definition. That took a few minutes of frustrated Googling to figure out. I also had a small moment of satisfaction when I immediately figured out why he was getting a blank screen after he commented out the code to set the camera position. I changed the names in a few places to make things more obvious, like `SetRotationZ` instead of just `SetRotation` and `m_RotationZDeg` instead of `m_Rotation`. Probably makes it less readable... might change it back...
+- I followed along with the [Creating an Orthographic Camera](https://www.youtube.com/watch?v=NjKv-HWstxA&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=35) video to implement an orthographic camera. I had a moment of confusion when I tried to be clever and add `near` and `far` parameters with default values to the constructor. This is trivial to do in C#, but apparently in C/C++, the signature defined in the header cannot be the same as the signature in the definition. That took a few minutes of frustrated Googling to figure out. I also had a small moment of satisfaction when I immediately figured out why he was getting a blank screen after he commented out the code to set the camera position. I changed the names in a few places to make things more obvious<sup>9</sup>.
 
   - [commit](https://github.com/toverbay/fargrid/commit/fcb7c05b0064df9cf3b73e190991bb72eabd49dd)
 
@@ -114,7 +114,11 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/8fdb00fccd9ef4876ccc2a36c968f94b44ec21e4)
 
-- I followed along with the [TIMESTEPS and DELTA TIME](https://www.youtube.com/watch?v=pctGOMDW-HQ&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=37) video to add a rather primitive timing mechanism to the engine. Cherno did mention that more functionality will be added to it later, but I couldn't help thinking about an [old blog post](https://gafferongames.com/post/fix_your_timestep/) I read about timing in games, particularly with game physics. Rendering should go as fast as the monitor's refresh rate (to avoid tearing), but physics integration frames should run at a predictable (and often slower) rate. The most popular comment from the video also mentions this. For now, I'm going to trust that Cherno knows what he's doing, but I will re-visit this later.
+- I followed along with the [TIMESTEPS and DELTA TIME](https://www.youtube.com/watch?v=pctGOMDW-HQ&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=37) video to add a rather primitive timing mechanism to the engine. Cherno did mention that more functionality will be added to it later, but I couldn't help thinking about an [old blog post](https://gafferongames.com/post/fix_your_timestep/) I read about timing in games, particularly with game physics. Rendering should go as fast as the monitor's refresh rate (to avoid tearing), but physics integration frames should run at a predictable (and often slower) rate. For now, I'm going to trust that Cherno knows what he's doing, but I will re-visit this later<sup>10</sup>.
+
+  - [commit](https://github.com/toverbay/fargrid/commit/2b1658f2506bf51287b5e2b58f63d473cacd0886)
+
+- I followed along with the [Transforms](https://www.youtube.com/watch?v=cbB2fh0UxZ0&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=38) video to add transforms that allow objects in the scene to have their own translation, rotation, and scale. We used this to draw a grid of squares on the screen, which is basically a tilemap without the textures. Very cool.
 
   - [commit]()
 
@@ -134,3 +138,11 @@ I am a professional software engineer working on C# and JavasScript projects and
   <sup><sup>5</sup> Easy to add to Fargrid, but this may get tricky to expose to C# later.</sup>
 
   <sup><sup>6</sup> In `Application.cpp` inside the element loop for the layout, casting the element offset to a void pointer `(const void*)element.Offset` caused a [C4312 warning](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4312). After a bit of Googling, it seems like it's easy to fix with a double cast `(const void*)(UINT_PTR)element.Offset`.</sup>
+
+  <sup><sup>7</sup> I tried it and... it works... not sure if it's any faster, but it didn't crash</sup>
+
+  <sup><sup>8</sup> Maybe `Commit` or `Deliver` or simply `Render`? I'll have to figure out a better name.</sup>
+
+  <sup><sup>9</sup> Like `SetRotationZ` instead of just `SetRotation` and `m_RotationZDeg` instead of `m_Rotation`. Probably makes it less readable... might change it back...</sup>
+
+  <sup><sup>10</sup> The most popular comment from the video also mentions this, so I'm not alone thinking about this.</sup>
