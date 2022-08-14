@@ -1,8 +1,12 @@
 #include <Fargrid.h>
 
+#include "Platform/OpenGL/OpenGLShader.h"
+
 #include "imgui/imgui.h"
 
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/glm/gtc/type_ptr.inl>
+#include <imgui/imgui_widgets.cpp>
 
 class ExampleLayer : public Fargrid::Layer
 {
@@ -89,7 +93,7 @@ public:
 	}			
 )";
 
-		m_Shader.reset(new Fargrid::Shader(vertexSrc, fragmentSrc));
+		m_Shader.reset(Fargrid::Shader::Create(vertexSrc, fragmentSrc));
 
 		std::string flatColorShaderVertexSrc = R"(
 	#version 450 core
@@ -118,7 +122,7 @@ public:
 	}			
 )";
 
-		m_FlatColorShader.reset(new Fargrid::Shader(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_FlatColorShader.reset(Fargrid::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
 	}
 
 	void OnUpdate(Fargrid::Timestep ts) override
@@ -152,8 +156,7 @@ public:
 		{
 			static glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
-			glm::vec4 redColor(0.8f, 0.2f, 0.3f, 1.0f);
-			glm::vec4 blueColor(0.2f, 0.3f, 0.8f, 1.0f);
+			m_FlatColorShader->Bind();
 
 			for (int y = -6; y < 6; y++)
 			{
@@ -162,9 +165,9 @@ public:
 					glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
 					glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
 					if ((x + y) % 2 == 0) // Checkerboard pattern
-						m_FlatColorShader->UploadUniformFloat4("u_Color", redColor);
+						std::dynamic_pointer_cast<Fargrid::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat4("u_Color", m_SquareColor1);
 					else
-						m_FlatColorShader->UploadUniformFloat4("u_Color", blueColor);
+						std::dynamic_pointer_cast<Fargrid::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat4("u_Color", m_SquareColor2);
 					Fargrid::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
 				}
 			}
@@ -176,6 +179,10 @@ public:
 
 	virtual void OnImGuiRender() override
 	{
+		ImGui::Begin("Settings");
+		ImGui::ColorEdit4("Square Color 1", glm::value_ptr(m_SquareColor1));
+		ImGui::ColorEdit4("Square Color 2", glm::value_ptr(m_SquareColor2));
+		ImGui::End();
 	}
 
 	void OnEvent(Fargrid::Event& event) override
@@ -202,6 +209,9 @@ private:
 	float m_CameraZRotationDeg = 0.0f;
 	float m_CameraMoveSpeed = 3.5f;			// units/second
 	float m_CameraRotationSpeed = 180.0f;	// degrees/second
+
+	glm::vec4 m_SquareColor1 = { 0.8f, 0.2f, 0.3f, 1.0f };
+	glm::vec4 m_SquareColor2 = { 0.2f, 0.3f, 0.8f, 1.0f };
 };
 
 class Sandbox : public Fargrid::Application

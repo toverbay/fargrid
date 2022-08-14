@@ -1,23 +1,18 @@
 #pragma once
+
 #include <string>
-#include <glm/glm.hpp>
 
 namespace Fargrid {
 
 	class Shader
 	{
 	public:
-		Shader(const std::string& vertexSrc, std::string& fragmentSrc);
-		~Shader();
+		virtual ~Shader() = default;
+		
+		virtual void Bind() const = 0;
+		virtual void Unbind() const = 0;
 
-		void Bind() const;
-		void Unbind() const;
-
-		void UploadUniformMat4(const std::string& name, const glm::mat4& matrix);
-		void UploadUniformFloat4(const std::string& name, const glm::vec4 values);
-
-	private:
-		uint32_t m_RendererID;
+		static Shader* Create(const std::string& vertexSrc, std::string& fragmentSrc);
 	};
 
 }

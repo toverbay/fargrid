@@ -126,6 +126,10 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   The more interesting thing about this video is at the very end when he put forth the question to continue the series as a fully 3D engine or switch to a "blazingly fast" 2D engine. Having watched the later videos, I know the decision was made to go 2D. I'm interested in making a 2D game, so I was ok with that. However, I wonder if maybe the better decision was to continue in 3D to teach all the aspects of a game engine rather than the more narrowly-focused 2D. I mean, 2D is just a subset of 3D, right? Sure, there are optimizations that are specific to 2D rendering, but I feel those could be taught as separate videos within the overall series. The sponsored version of his game engine is fully 3D and I intend on sponsoring him to get access to it, so I suppose it's not that big of a deal. Anyways...
 
+  - [commit](https://github.com/toverbay/fargrid/commit/97bc1faf899dcc927604e3121c7fb654c72e630c)
+
+- I followed along with the [Shader Abstraction and Uniforms](https://www.youtube.com/watch?v=d5wL6eZnWMU&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=40) video to move more OpenGL code from the shader class to the platform-specific implementation. More work needs to be done with other systems before we can really make the shader class abstract. He mentioned an optimization by caching the uniform locations with a hashmap and pointed to another [video in his OpenGL series](https://www.youtube.com/watch?v=nBB0LGSIm5Q) to do that. I think I'll watch that video and add it to Fargrid as well.
+
   - [commit]()
 
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~
