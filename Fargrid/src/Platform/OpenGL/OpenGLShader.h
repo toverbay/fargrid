@@ -33,7 +33,7 @@ namespace Fargrid {
 
 		GLint GetUniformLocation(const std::string& name) const;
 	private:
-		uint32_t m_RendererID;
+		uint32_t m_RendererID = -1;
 
 	private:
 		mutable std::unordered_map<std::string, GLint> m_UniformLocationCache;

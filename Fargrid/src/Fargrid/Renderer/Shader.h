@@ -14,5 +14,4 @@ namespace Fargrid {
 
 		static Shader* Create(const std::string& vertexSrc, std::string& fragmentSrc);
 	};
-
 }

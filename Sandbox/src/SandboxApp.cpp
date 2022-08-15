@@ -22,7 +22,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.6f, 0.1f, 0.2f, 1.0f,
 		};
 
-		std::shared_ptr<Fargrid::VertexBuffer> vertexBuffer;
+		Fargrid::Ref<Fargrid::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Fargrid::VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		Fargrid::BufferLayout layout = {
@@ -33,7 +33,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Fargrid::IndexBuffer> indexBuffer;
+		Fargrid::Ref<Fargrid::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Fargrid::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -46,7 +46,7 @@ public:
 			-0.5f,  0.5f, 0.0f,
 		};
 
-		std::shared_ptr<Fargrid::VertexBuffer> squareVB;
+		Fargrid::Ref<Fargrid::VertexBuffer> squareVB;
 		squareVB.reset(Fargrid::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
 			{ Fargrid::ShaderDataType::Float3, "a_Position" },
@@ -54,7 +54,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Fargrid::IndexBuffer> squareIB;
+		Fargrid::Ref<Fargrid::IndexBuffer> squareIB;
 		squareIB.reset(Fargrid::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -198,11 +198,11 @@ public:
 	//}
 
 private:
-	std::shared_ptr<Fargrid::Shader> m_Shader;
-	std::shared_ptr<Fargrid::VertexArray> m_VertexArray;
+	Fargrid::Ref<Fargrid::Shader> m_Shader;
+	Fargrid::Ref<Fargrid::VertexArray> m_VertexArray;
 
-	std::shared_ptr<Fargrid::Shader> m_FlatColorShader;
-	std::shared_ptr<Fargrid::VertexArray> m_SquareVA;
+	Fargrid::Ref<Fargrid::Shader> m_FlatColorShader;
+	Fargrid::Ref<Fargrid::VertexArray> m_SquareVA;
 
 	Fargrid::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
