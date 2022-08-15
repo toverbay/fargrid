@@ -132,6 +132,14 @@ I am a professional software engineer working on C# and JavasScript projects and
 
   - [commit](https://github.com/toverbay/fargrid/commit/a9b5d9910ffc96b4b2043d07b5ed4d6f2d0820d9)
 
+- I followed along with the [Refs, Scopes and Smart Pointers](https://www.youtube.com/watch?v=HkGZ378nArE&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=41) video to define our own `Ref<T>` (shared_ptr) & `Scope<T>` (unique_ptr) types. Interesting discussion about memory, ownership, ref-counting, and preformance. This was more of a setup episode for future ideas, so no change at runtime.
+
+  - [commit](https://github.com/toverbay/fargrid/commit/bf470fa79e54a1100505f3ffcc1543252ebb026e)
+
+- I followed along with the [TEXTURES](https://www.youtube.com/watch?v=qEfohFgQ1-I&list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT&index=42) video to add basic texture support to the engine. This one was challenging. I went ahead and attempted to replace more raw pointers in the code with `Ref<T>`. That produced a few head-scratching moments, but I got it working. Also, I just made a few other changes that deviates a bit from what Cherno did in the video<sup>11</sup>.
+
+  - [commit]()
+
 - ~~I intend to create a C# project called `Fargrid-Client` or something in the future. Specifically, when Cherno decides to convert Hazel to a static library, I will create an additional C++ CLI project to export to .NET. That's when things should start to get really interesting. Stay tuned.~~
 - I looked ahead at future episodes and saw that Cherno intends on adding C# scripting support. Instead, I thought I'd try creating a version of this game engine written in **[Odin](https://odin-lang.org/)**.
 
@@ -156,3 +164,5 @@ I am a professional software engineer working on C# and JavasScript projects and
   <sup><sup>9</sup> Like `SetRotationZ` instead of just `SetRotation` and `m_RotationZDeg` instead of `m_Rotation`. Probably makes it less readable... might change it back...</sup>
 
   <sup><sup>10</sup> The most popular comment from the video also mentions this, so I'm not alone thinking about this.</sup>
+
+  <sup><sup>11</sup> I left the vendor folder for the `stb_image` files at 'stb' in case I want to grab any other lib from that vendor. Also, the default indent was set to tabs for some reason. I'm changing to spaces in any file that contains tabs. I'm not super religious about tabs vs. spaces, I'm just... used to spaces...</sup>

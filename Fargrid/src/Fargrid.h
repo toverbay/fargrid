@@ -19,6 +19,7 @@
 
 #include "Fargrid/Renderer/Buffer.h"
 #include "Fargrid/Renderer/Shader.h"
+#include "Fargrid/Renderer/Texture.h"
 #include "Fargrid/Renderer/VertexArray.h"
 
 #include "Fargrid/Renderer/OrthographicCamera.h"

@@ -17,6 +17,7 @@ IncludeDir["GLFW"] = "Fargrid/vendor/GLFW/include"
 IncludeDir["Glad"] = "Fargrid/vendor/Glad/include"
 IncludeDir["ImGui"] = "Fargrid/vendor/imgui"
 IncludeDir["glm"] = "Fargrid/vendor/glm"
+IncludeDir["stb"] = "Fargrid/vendor/stb"
 
 group "Dependencies"
     include "Fargrid/vendor/GLFW"
@@ -45,6 +46,10 @@ project "Fargrid"
     {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp",
+        "%{prj.name}/vendor/glm/glm/**.hpp",
+        "%{prj.name}/vendor/glm/glm/**.inl",
+        "%{prj.name}/vendor/stb/**.h",
+        "%{prj.name}/vendor/stb/**.cpp",
     }
 
     includedirs
@@ -54,7 +59,8 @@ project "Fargrid"
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
         "%{IncludeDir.ImGui}",
-        "%{IncludeDir.glm}"
+        "%{IncludeDir.glm}",
+        "%{IncludeDir.stb}"
     }
 
     links
